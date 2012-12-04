@@ -13,7 +13,7 @@ Add the following dependencies to your projects composer.json file:
 
     "require": {
         # ..
-        "tp/odm-fixture-test-case": ">=2.1"
+        "einblick/odm-fixtures-test-case": ">=0.1"
         # ..
     }
 
