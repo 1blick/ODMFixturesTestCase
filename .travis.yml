@@ -1,9 +1,14 @@
 language: php
 
 php:
-  - 5.4
   - 5.3
+  - 5.4
+
+env:
+  - MONGO_VERSION=1.2.12
+
+services: mongodb
 
 before_script:
-  - sudo pecl install mongo
-  - composer install -v
+  - pecl -q install mongo-${MONGO_VERSION} && echo "extension=mongo.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
+  - composer install -v --dev
