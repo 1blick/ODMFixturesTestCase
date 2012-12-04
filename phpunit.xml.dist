@@ -19,7 +19,7 @@
     -->
 
     <testsuites>
-        <testsuite name="Best Practice Bundle Test Suite">
+        <testsuite name="ODMFixturesTestCase Suite">
             <directory>./Tests/</directory>
         </testsuite>
     </testsuites>
