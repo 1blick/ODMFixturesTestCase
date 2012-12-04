@@ -27,7 +27,10 @@ Add the following dependencies to your projects composer.json file:
 <?php
 namespace My\Namespace\Tests;
 
-use TP\ODMFixturesTestCase\Test\FixtureTestCase;
+/**
+ * Import the FixtureTestCase class
+ */
+use Einblick\ODMFixturesTestCase\Test\FixtureTestCase;
 
 /**
  * This test will load ODM Fixtures from Bundles
