@@ -1,5 +1,5 @@
 {
-    "name": "einblick/fixture-loader",
+    "name": "tp/odm-fixtures-test-case",
     "version": "0.1",
     "description": "A WebTestCase that automagically executes ODM Fixtures from passed in bundle names.",
     "keywords": ["symfony", "mongodb", "test", "fixture", "odm", "autoload"],
@@ -27,7 +27,7 @@
     },
     "minimum-stability": "dev",
     "autoload":     {
-        "psr-0": { "Einblick\\EinblickFixtureAutoLoadBundle": "" }
+        "psr-0": { "TP\\ODMFixturesTestCase": "" }
     },
-    "target-dir": "Einblick/EinblickFixtureAutoLoadBundle"
+    "target-dir": "TP/ODMFixturesTestCase"
 }
