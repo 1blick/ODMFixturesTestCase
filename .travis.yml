@@ -5,7 +5,7 @@ php:
   - 5.3
 
 before_script:
-  - sudo apt-get install mongodb
-  - sudo apt-get install php-pear
+  - sudo apt-get -y install mongodb
+  - sudo apt-get -y install php-pear
   - sudo pecl install mongo
   - composer install -v
