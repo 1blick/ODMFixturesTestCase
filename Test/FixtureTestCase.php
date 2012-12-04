@@ -28,7 +28,6 @@ use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Bridge\Doctrine\DataFixtures\ContainerAwareLoader;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-use Doctrine\ODM\MongoDB\DocumentManager;
 use Doctrine\Common\DataFixtures\Executor\MongoDBExecutor;
 use Doctrine\Common\DataFixtures\Purger\MongoDBPurger;
 
@@ -65,7 +64,7 @@ abstract class FixtureTestCase extends WebTestCase
     /**
      * Holds the document manager instance
      *
-     * @var Doctrine\ODM\MongoDB\DocumentManager
+     * @var \Doctrine\ODM\MongoDB\DocumentManager
      * @staticvar
      */
     public static $dm;
