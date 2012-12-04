@@ -1,6 +1,11 @@
 language: php
+
 php:
   - 5.4
   - 5.3
 
-before_script: composer install -v
+before_script:
+  - sudo apt-get install mongodb
+  - sudo apt-get install php-pear
+  - sudo pecl install mongo
+  - composer install -v
