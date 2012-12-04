@@ -1,0 +1,33 @@
+{
+    "name": "einblick/fixture-loader",
+    "version": "0.1",
+    "description": "A WebTestCase that automagically executes ODM Fixtures from passed in bundle names.",
+    "keywords": ["symfony", "mongodb", "test", "fixture", "odm", "autoload"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Ploch",
+            "email": "tp@responsive-code.de",
+            "homepage": "http://www.responsive-code.de"
+        },
+        {
+            "name": "Christian Weyand",
+            "email": "c.weyand@1blick.de",
+            "homepage": "https://1blick.de/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "doctrine/data-fixtures": "dev-master",
+        "doctrine/mongodb": "1.*@dev",
+        "doctrine/mongodb-odm": "dev-master",
+        "symfony/framework-bundle": ">=2.1.0",
+        "symfony/doctrine-bridge": ">=2.1.0",
+        "symfony/console": ">=2.1.0"
+    },
+    "minimum-stability": "dev",
+    "autoload":     {
+        "psr-0": { "Einblick\\EinblickFixtureAutoLoadBundle": "" }
+    },
+    "target-dir": "Einblick/EinblickFixtureAutoLoadBundle"
+}
