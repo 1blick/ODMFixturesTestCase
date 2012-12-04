@@ -18,6 +18,7 @@
     ],
     "require": {
         "php": ">=5.3",
+        "ext-mongo": "*",
         "doctrine/data-fixtures": "dev-master",
         "doctrine/mongodb": "1.*@dev",
         "doctrine/mongodb-odm": "dev-master",
