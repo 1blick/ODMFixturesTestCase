@@ -1,0 +1,29 @@
+{
+    "name": "Einblick/fixture-loader",
+    "version": "0.1",
+    "description": "Blah",
+    "keywords": ["symfony", "1blick"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thomas Ploch",
+            "email": "c.weyand@1blick.de",
+            "homepage": "https://1blick.de/"
+        },
+        {
+            "name": "Christian Weyand",
+            "email": "c.weyand@1blick.de",
+            "homepage": "https://1blick.de/"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/framework-bundle": "2.1.*",
+        "symfony/symfony": "2.1.*"
+    },
+    "autoload":     {
+        "psr-0": { "Einblick\\EinblickFixtureAutoLoadBundle": "" }
+    },
+    "target-dir": "Einblick/EinblickFixtureAutoLoadBundle"
+}
