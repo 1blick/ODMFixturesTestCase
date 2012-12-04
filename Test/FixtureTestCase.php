@@ -22,7 +22,7 @@
  * @filesource
  * @since v0.1
  */
-namespace Einblick\EinblickFixtureAutoLoadBundle\Test;
+namespace Einblick\ODMFixturesTestCase\Test;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Symfony\Bridge\Doctrine\DataFixtures\ContainerAwareLoader;
@@ -34,8 +34,8 @@ use Doctrine\Common\DataFixtures\Purger\MongoDBPurger;
 /**
  * This TestCase enables to load fixtures automagically if you pass an array of bundles.
  *
- * @package    Einblick
- * @subpackage ODMFixtureAutoLoadTest
+ * @package    ODMFixturesTestCase
+ * @subpackage Test
  */
 abstract class FixtureTestCase extends WebTestCase
 {
