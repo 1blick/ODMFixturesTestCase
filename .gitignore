@@ -1,5 +1,7 @@
 /vendor
 
+composer.lock
+composer.phar
 
 # IDE specific excludes (phpstorm, netbeans, eclipse)
 /nbproject/*

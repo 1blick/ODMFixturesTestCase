@@ -1,22 +1,48 @@
 <?php
+/**
+ * ODMFixtureAutoLoadTest file
+ *
+ * Copyright (c) 2012 1blick GmbH - https://1blick.de
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+ * documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+ * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+ * Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+ * WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS
+ * OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+ * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * @author Thomas Ploch <t.ploch@reizwerk.com>
+ * @author Christian Weyand <c.weyand@1blick.de>
+ * @filesource
+ * @since v0.1
+ */
 namespace Einblick\EinblickFixtureAutoLoadBundle\Test;
 
 use Symfony\Component\Console\Output\ConsoleOutput;
-
-use Doctrine\ODM\MongoDB\DocumentManager;
-
-use Doctrine\Common\DataFixtures\Executor\MongoDBExecutor;
-use Doctrine\Common\DataFixtures\Purger\MongoDBPurger;
 use Symfony\Bridge\Doctrine\DataFixtures\ContainerAwareLoader;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
+use Doctrine\ODM\MongoDB\DocumentManager;
+use Doctrine\Common\DataFixtures\Executor\MongoDBExecutor;
+use Doctrine\Common\DataFixtures\Purger\MongoDBPurger;
+
 /**
- * This TestCase enables to load fixtures automagically if you pass an array of
- * bundles. Depends on the DoctrineDataFixturesBundle.
+ * This TestCase enables to load fixtures automagically if you pass an array of bundles.
+ *
+ * @package    Einblick
+ * @subpackage ODMFixtureAutoLoadTest
  */
 abstract class FixtureTestCase extends WebTestCase
 {
     /**
+     * The default options
+     *
      * @var array
      */
     public $options = array(
@@ -28,7 +54,6 @@ abstract class FixtureTestCase extends WebTestCase
      * Add the Bundlenames from which to load the fixture
      *
      * @var array
-     * @staticvar
      */
     public $fixtures = array();
 
@@ -78,7 +103,8 @@ abstract class FixtureTestCase extends WebTestCase
     }
 
     /**
-     * @param string $managerName
+     * Processes kernel options and boots the kernel
+     *
      * @param array  $kernelOptions
      *
      * @return void
@@ -94,6 +120,8 @@ abstract class FixtureTestCase extends WebTestCase
     }
 
     /**
+     * Fetches the configured document manager
+     *
      * @return void
      */
     protected function fetchDocumentManager()
@@ -105,6 +133,8 @@ abstract class FixtureTestCase extends WebTestCase
     }
 
     /**
+     * Collects the paths from passed in bundle names
+     *
      * @return array
      */
     protected function getPaths()
@@ -123,6 +153,8 @@ abstract class FixtureTestCase extends WebTestCase
     }
 
     /**
+     * Executes the fixtures
+     *
      * @return void
      */
     protected function doExecute()
@@ -135,6 +167,8 @@ abstract class FixtureTestCase extends WebTestCase
 
     /**
      * Purges the db and shuts down the kernel
+     *
+     * @return void
      */
     protected function tearDown()
     {

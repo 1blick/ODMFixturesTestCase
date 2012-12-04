@@ -1,15 +1,14 @@
 {
-    "name": "Einblick/fixture-loader",
+    "name": "einblick/fixture-loader",
     "version": "0.1",
-    "description": "Blah",
-    "keywords": ["symfony", "1blick"],
-    "type": "symfony-bundle",
+    "description": "A WebTestCase that automagically executes ODM Fixtures from passed in bundle names.",
+    "keywords": ["symfony", "mongodb", "test", "fixture", "odm", "autoload"],
     "license": "MIT",
     "authors": [
         {
             "name": "Thomas Ploch",
-            "email": "t.ploch@reizwerk.com",
-            "homepage": "http://reizwerk.com/"
+            "email": "tp@responsive-code.de",
+            "homepage": "http://www.responsive-code.de"
         },
         {
             "name": "Christian Weyand",
@@ -19,12 +18,12 @@
     ],
     "require": {
         "php": ">=5.3",
-        "symfony/framework-bundle": "2.1.*",
-        "symfony/symfony": "2.1.*",
-        "doctrine/orm": ">=2.2.3,<2.4-dev",
-        "doctrine/doctrine-bundle": "1.0.*",
-        "doctrine/doctrine-fixtures-bundle": "dev-master",
-        "doctrine/mongodb-odm-bundle": "dev-master"
+        "doctrine/data-fixtures": "dev-master",
+        "doctrine/mongodb": "1.*@dev",
+        "doctrine/mongodb-odm": "dev-master",
+        "symfony/framework-bundle": ">=2.1.0",
+        "symfony/doctrine-bridge": ">=2.1.0",
+        "symfony/console": ">=2.1.0"
     },
     "minimum-stability": "dev",
     "autoload":     {
