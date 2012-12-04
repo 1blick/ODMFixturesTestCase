@@ -1,5 +1,7 @@
 # ODMFixturesTestCase for Symfony2
 
+[![Build Status](https://secure.travis-ci.org/1blick/ODMFixturesTestCase.png?branch=master)](https://travis-ci.org/1blick/ODMFixturesTestCase)
+
 A TestCase base class (extending WebTestCase) that autoloads and purges ODM Fixtures from passed in bundle names.
 
     VERSION: Compatible for Symfony2 version >= 2.1.*
