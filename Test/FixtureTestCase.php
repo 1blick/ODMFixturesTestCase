@@ -177,5 +177,22 @@ abstract class FixtureTestCase extends WebTestCase
         if (null !== static::$kernel) {
             static::$kernel->shutdown();
         }
+        $this->speedUpTestExecution();
+    }
+
+    /**
+     * Working on memory consumption and execution time
+     *
+     * @link   http://kriswallsmith.net/post/18029585104/faster-phpunit  suggested improvement by Kris Wallsmith to speed up tests
+     */
+    protected function speedUpTestExecution()
+    {
+        $refl = new \ReflectionObject($this);
+        foreach ($refl->getProperties() as $prop) {
+            if (!$prop->isStatic() && 0 !== strpos($prop->getDeclaringClass()->getName(), 'PHPUnit_')) {
+                $prop->setAccessible(true);
+                $prop->setValue($this, null);
+            }
+        }
     }
 }
